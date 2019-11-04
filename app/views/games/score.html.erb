@@ -1,0 +1,9 @@
+<h1>Result</h1>
+<br>
+<% if @result[:message] == 'not in the grid' %>
+  <p>Not in the grid</p>
+<% elsif @result[:message] == 'well done' %>
+  <p>Well done ! Your score: <%= @result[:score] %></p>
+<% else %>
+  <p><strong><%= @result[:answer].upcase %></strong> is not an english word!</p>
+<% end %>
